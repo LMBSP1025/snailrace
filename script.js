@@ -35,6 +35,7 @@ document.getElementById("start").onclick = function() {
     game = setInterval(run, 0.1);
     aPos = bPos = cPos = dPos = ePos = 0;
     document.getElementById("start").style.display = 'none';
+    document.getElementById("set").style.display = 'none';
 };
 var setSpeed = () => {
     let a = Math.random();
@@ -64,5 +65,6 @@ function stop(winner) {
     names[winner].style.backgroundColor = "brown";
     console.log("stop");
     clearInterval(game);
+    document.getElementById("set").style.display = 'block';
     document.getElementById("start").style.display = 'block';
 }
