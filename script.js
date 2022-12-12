@@ -27,6 +27,7 @@ let run = () => {
     }
 }
 document.getElementById("start").onclick = function() {
+    stop(winner)
     for (i = 0; i < 5; i++) {
         names[i].style.color = "black";
         names[i].style.fontWeight = "normal";
@@ -34,6 +35,7 @@ document.getElementById("start").onclick = function() {
     }
     game = setInterval(run, 0.1);
     aPos = bPos = cPos = dPos = ePos = 0;
+    document.getElementById("start").style.display = 'none';
 };
 var setSpeed = () => {
     let a = Math.random();
@@ -63,4 +65,5 @@ function stop(winner) {
     names[winner].style.backgroundColor = "brown";
     console.log("stop");
     clearInterval(game);
+    document.getElementById("start").style.display = 'block';
 }

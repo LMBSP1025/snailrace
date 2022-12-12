@@ -18,6 +18,10 @@ body {
     position: relative;
 }
 
+#start {
+    display: block;
+}
+
 #field {
     width: 100%;
     background-color: rgb(108, 205, 110);
