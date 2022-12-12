@@ -1,0 +1,105 @@
+.snail {
+    width: 50px;
+    height: 50px;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+#field {
+    background-color: rgb(108, 205, 110);
+    height: 304px;
+}
+
+#a {
+    background-color: brown;
+    left: 0;
+}
+
+#b {
+    background-color: rgb(216, 203, 59);
+    left: 0;
+}
+
+#c {
+    background-color: rgb(48, 165, 42);
+    left: 0;
+}
+
+#d {
+    background-color: rgb(42, 95, 165);
+    left: 0;
+}
+
+#e {
+    background-color: rgb(116, 42, 165);
+    left: 0;
+}
+
+body {}
+
+#goal {
+    background-color: rgb(177, 24, 24);
+    width: 10px;
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+}
+
+#game {
+    width: 90vw;
+    float: left;
+    margin-right: 0;
+    box-sizing: border-box;
+}
+
+hr {
+    border: 0px;
+    margin: 0 auto;
+    height: 1px;
+    background-color: white;
+}
+
+#board {
+    font-size: 25pt;
+    font-weight: bolder;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 25px;
+    font-size: 20pt;
+    line-height: 30pt;
+    box-shadow: 0px 0px 0px 10px brown;
+}
+
+#name {
+    font-size: 20pt;
+    font-weight: normal;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#score {
+    font-size: 15pt;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#start {
+    background-color: brown;
+    color: white;
+}
+
+#set {
+    background-color: rgb(198, 144, 144);
+    color: white;
+    width: fit-content;
+    padding: 5px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
