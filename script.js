@@ -27,7 +27,6 @@ let run = () => {
     }
 }
 document.getElementById("start").onclick = function() {
-    stop(winner)
     for (i = 0; i < 5; i++) {
         names[i].style.color = "black";
         names[i].style.fontWeight = "normal";
