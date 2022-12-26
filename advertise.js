@@ -15,3 +15,12 @@ setInterval(function() {
 document.getElementById("close").onclick = function() {
     document.getElementById("ad2").style.display = 'none';
 };
+document.getElementById("image1").onclick = function() {
+    location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+}
+document.getElementById("image2").onclick = function() {
+    location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+}
+document.getElementById("image3").onclick = function() {
+    location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+}
