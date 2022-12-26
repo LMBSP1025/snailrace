@@ -11,3 +11,7 @@ setInterval(function() {
     document.getElementById("image2").src = "불법광고들/" + j[num] + ".png"
     document.getElementById("image3").src = "불법광고들/" + k[num] + ".png"
 }, 10000);
+
+document.getElementById("close").onclick = function() {
+    document.getElementById("ad2").style.display = 'none';
+};

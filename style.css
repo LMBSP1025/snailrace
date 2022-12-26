@@ -105,7 +105,7 @@ hr {
     left: 50%;
     transform: translate(-50%, 0);
     bottom: 0;
-    display: flex;
+    bottom: -100px;
 }
 
 #ad2 {
@@ -132,6 +132,21 @@ hr {
     color: white;
 }
 
+img {
+    width: 400px;
+}
+
+#close {
+    background-color: rgb(218, 218, 218);
+    position: absolute;
+    width: 8pt;
+    font-size: 8pt;
+    top: 0;
+    color: black;
+    cursor: pointer;
+    right: 0;
+}
+
 #set {
     background-color: rgb(198, 144, 144);
     color: white;
@@ -155,5 +170,12 @@ hr {
     }
     #score {
         font-size: 12pt;
+    }
+}
+
+@media (min-width:810px) {
+    #ad1 {
+        bottom: 0;
+        display: flex;
     }
 }
