@@ -99,6 +99,26 @@ hr {
     justify-content: space-evenly;
 }
 
+#ad1 {
+    width: fit-content;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 0;
+    display: flex;
+}
+
+#ad2 {
+    width: fit-content;
+    position: absolute;
+    margin: 0 auto;
+    top: 330px;
+}
+
+#image1 {
+    margin-right: 5px;
+}
+
 #score {
     line-height: 30pt;
     font-size: 14pt;
@@ -120,6 +140,7 @@ hr {
     margin: 0 auto;
     margin-top: 30px;
     display: block;
+    margin-bottom: 45px;
 }
 
 @media (max-width:300px) {

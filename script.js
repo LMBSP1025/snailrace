@@ -27,7 +27,7 @@ let run = () => {
     }
 }
 document.getElementById("start").onclick = function() {
-    for (i = 0; i < 5; i++) {
+    for (var i = 0; i < 5; i++) {
         names[i].style.color = "black";
         names[i].style.fontWeight = "normal";
         names[i].style.backgroundColor = "white";
