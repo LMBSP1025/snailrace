@@ -136,12 +136,12 @@ img {
 }
 
 #close {
-    background-color: rgb(218, 218, 218);
+    background-color: rgba(0, 0, 0, 0.422);
     position: absolute;
-    width: 6pt;
-    font-size: 5pt;
+    width: 12pt;
+    font-size: 12pt;
     top: 0;
-    color: black;
+    color: rgb(255, 255, 255);
     right: 0;
     text-align: center;
 }

@@ -1,16 +1,17 @@
-const i = [1, 2, 5];
-const j = [2, 5, 1];
-const k = [3, 4, 6];
-var num = 0;
+const i = [7, 1, 2, 5];
+const j = [2, 5, 7, 1];
+const k = [3, 4, 8, 6];
+var num = Math.floor(Math.random() * 2);
 setInterval(function() {
-    num++;
-    if (num > 2) {
-        num = 0;
+    if (num > 3) {
+        num = Math.floor(Math.random() * 2);
     }
     document.getElementById("image1").src = "불법광고들/" + i[num] + ".png"
     document.getElementById("image2").src = "불법광고들/" + j[num] + ".png"
     document.getElementById("image3").src = "불법광고들/" + k[num] + ".png"
-}, 12000);
+
+    num++;
+}, 8000);
 
 document.getElementById("close").onclick = function() {
     document.getElementById("ad2").style.display = 'none';
