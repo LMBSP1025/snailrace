@@ -1,5 +1,5 @@
-const i = [7, 1, 2, 5];
-const j = [2, 5, 7, 1];
+const i = [7, 1, 2, 9];
+const j = [10, 5, 7, 1];
 const k = [3, 4, 8, 6];
 var num = Math.floor(Math.random() * 2);
 setInterval(function() {
