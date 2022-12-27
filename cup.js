@@ -1,6 +1,6 @@
 const max = Math.floor(Math.random() * 30 + 20);
-var speed = 400;
-var i = 0;
+var speed = 300;
+var count = 0;
 var l = document.getElementById("left")
 var m = document.getElementById("mid")
 var r = document.getElementById("right")
@@ -8,10 +8,12 @@ var ball = document.getElementById("ball")
 var isShuffled = false;
 
 document.getElementById("start").onclick = function() {
+    count = 0;
+
     document.getElementById("start").style.display = 'none';
-    l.style.top = "200px";
-    m.style.top = "200px";
-    r.style.top = "200px";
+    l.style.top = "150px";
+    m.style.top = "150px";
+    r.style.top = "150px";
     setTimeout(function() {
         ball.style.display = "none";
         setTimeout(() => shuffle(numbers), 500);
@@ -25,25 +27,26 @@ window.onload = function() {
 }
 var open = function() {
     if (isShuffled) {
+        ball.style.display = "";
+        ball.style.marginLeft = l.style.marginLeft;
         l.style.top = "50px";
         m.style.top = "50px";
         r.style.top = "50px";
         document.getElementById("start").style.display = '';
+        isShuffled = false;
     }
 }
 
 
-const numbers = ["top: 200px; margin-left: 30px;", "top: 200px; margin-left: 219px;", "top: 200px; margin-left: 410px;"];
+const numbers = ["top: 150px; margin-left: 10px; z-index: 2", "top: 150px; margin-left: 122px; z-index: 3", "top: 150px; margin-left: 235px; z-index: 4"];
 var shuffle = function(array) {
-    if (i == max - 10) {
-        l.style.transitionDuration = 0.2;
-        l.style.transitionDuration = 0.2;
-        l.style.transitionDuration = 0.2;
-        speed = 300;
+    if (count == max - 10) {
+        l.style.transitionDuration = 0.1;
+        l.style.transitionDuration = 0.1;
+        l.style.transitionDuration = 0.1;
+        speed = 250;
     }
-    if (i == max) {
-        ball.style.display = "";
-        ball.style.marginLeft = l.style.marginLeft;
+    if (count == max) {
         isShuffled = true;
         return;
     }
@@ -58,6 +61,6 @@ var shuffle = function(array) {
     l.style.cssText = array[0];
     m.style.cssText = array[1];
     r.style.cssText = array[2];
-    i++;
+    count++;
     setTimeout(() => shuffle(numbers), speed);
 }
