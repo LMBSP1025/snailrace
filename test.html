@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var XMLHttpRequest;
+
+        function ajaxRequest(e) { //비동기방식으로 서버와 연결해주는 객체
+
+            //IE
+            //XMLHttpRequest = new ActiveXObject("Msxml2.XMLHTTP");
+
+            //크롬
+            XMLHttpRequest = new XMLHttpRequest(); //객체 생성
+
+            XMLHttpRequest.open("POST", "helloAjax_ok.jsp", true); //요청을 초기화하면서 요청 방식, 주소, 동기화 여부 지정
+            XMLHttpRequest.onreadystatechange = viewMessage; //콜백함수 이름을 viewMessage로 할 것이다.
+            XMLHttpRequest.send(null); //요청을 보낸다 - get방식으로 보내니까 null
+
+        }
+
+        //돌아올때 콜백함수(viewMessage) 자동실행 - 서버에서 응답이 왔을 때 실행되는 메서드
+        function viewMessage() {
+
+            //helloAjax_ok.jsp를 갔다가 넘어오는 response는 Text이다.
+            var responseText = XMLHttpRequest.responseText;
+
+            var divE = document.getElementById("name");
+
+            divE.innerHTML = responseText;
+
+        }
+    </script>
+    <form action="test.jsp" method="get">
+        <input type="text" id="name"><br>
+        <input type="button" value="매수" onclick="ajaxRequest('s')">
+        <input type="button" value="매도" onclick="ajaxRequest('b')">
+    </form>
+
+    <div id="value"></div>
+</body>
+
+</html>
