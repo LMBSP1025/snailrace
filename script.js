@@ -37,7 +37,7 @@ document.getElementById("start").onclick = function() {
     document.getElementById("start").style.display = 'none';
     document.getElementById("set").style.display = 'none';
 };
-var setSpeed = () => {
+let setSpeed = () => {
     let a = Math.random();
     let b = Math.random();
     let c = Math.random();

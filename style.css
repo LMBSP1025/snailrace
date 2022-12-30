@@ -267,6 +267,93 @@ ul h1 {
     margin-left: 12.5px;
 }
 
+#ground {
+    width: 350px;
+    height: 350px;
+    background-color: rgb(221, 213, 178);
+    margin: 0 auto;
+    padding: 25px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+#machine {
+    width: 300px;
+    height: 300px;
+    background-color: rgb(196, 175, 81);
+    border-radius: 20px 20px 5px 5px;
+    padding: 15px;
+    padding-top: 50px;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 0px 0px rgb(88, 79, 37);
+}
+
+#machine hr {
+    width: 100%;
+    height: 2px;
+    margin-bottom: 10px;
+    background-color: rgb(134, 121, 65);
+    border: 0;
+}
+
+#machine #inner {
+    width: 270px;
+    height: 90px;
+    background-color: white;
+    overflow-y: hidden;
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+
+#slotl {
+    width: 80px;
+    font-size: 80px;
+    float: left;
+    margin-left: 5px;
+    margin-right: 5px;
+    position: relative;
+    text-align: center;
+    top: -516px;
+    font-weight: bolder;
+    color: orangered;
+}
+
+#slotm {
+    width: 80px;
+    font-size: 80px;
+    float: left;
+    margin-left: 5px;
+    position: relative;
+    margin-right: 5px;
+    text-align: center;
+    top: -516px;
+    font-weight: bolder;
+    color: orangered;
+}
+
+#slotr {
+    width: 80px;
+    font-size: 80px;
+    float: left;
+    margin-left: 5px;
+    position: relative;
+    margin-right: 5px;
+    text-align: center;
+    top: -516px;
+    font-weight: bolder;
+    color: orangered;
+}
+
+#machine #start {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 18pt;
+    box-shadow: 0px 5px 0px 0px rgb(88, 37, 37);
+    line-height: 36pt;
+}
+
 @media (max-width:300px) {
     #board {
         font-size: 15pt;
