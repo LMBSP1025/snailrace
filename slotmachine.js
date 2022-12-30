@@ -112,7 +112,7 @@ function rslow() {
         }
         if (setCount == 0) newText = document.createTextNode('하낫또 안맞음.');
         if (setCount == 1) newText = document.createTextNode('두 개 맞음.');
-        if (setCount == 2) newText = document.createTextNode('오 다 맞음');
+        if (setCount == 3) newText = document.createTextNode('오 다 맞음');
         newDiv = document.createElement('div');
         newDiv.appendChild(newText);
         newDiv.id = "score";
