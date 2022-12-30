@@ -50,7 +50,7 @@ document.getElementById("start").onclick = function() {
 function loop() {
     ls = Number(ls) + la;
     if (ls >= -4) {
-        ls = -516;
+        ls = -445;
     }
     rafId = requestAnimationFrame(loop);
     document.getElementById("slotl").style.top = ls + "px";
@@ -59,7 +59,7 @@ function loop() {
 function moop() {
     ms = Number(ms) + ma;
     if (ms >= -4) {
-        ms = -516;
+        ms = -445;
     }
     rafmId = requestAnimationFrame(moop);
     document.getElementById("slotm").style.top = ms + "px";
@@ -68,7 +68,7 @@ function moop() {
 function roop() {
     rs = Number(rs) + ra;
     if (rs >= -4) {
-        rs = -516;
+        rs = -445;
     }
     rafrId = requestAnimationFrame(roop);
     document.getElementById("slotr").style.top = rs + "px";
