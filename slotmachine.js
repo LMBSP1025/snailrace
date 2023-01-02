@@ -20,7 +20,7 @@ document.getElementById("start").style.display = "block";
 var la, ma, ra;
 document.getElementById("start").onclick = function() {
     if (!lt && !mt && !rt) {
-        la = ma = ra = Math.random() * 101;
+        la = ma = ra = Math.random() * 151;
         rafId = requestAnimationFrame(loop);
         rafmId = requestAnimationFrame(moop);
         rafrId = requestAnimationFrame(roop);
