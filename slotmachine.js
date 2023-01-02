@@ -1,9 +1,6 @@
 var ls = 0;
 var ms = 0;
 var rs = 0;
-var ly = document.getElementById("slotl").style.top;
-var my = document.getElementById("slotm").style.top;
-var ry = document.getElementById("slotr").style.top;
 let rafId,
     rafmId,
     rafrId,
@@ -14,23 +11,25 @@ var lt = false;
 var mt = false;
 var rt = false;
 var setCount = 0;
-const speed = 40;
 var newDiv, newText;
 document.getElementById("start").style.display = "block";
 var la, ma, ra;
 document.getElementById("start").onclick = function() {
     if (!lt && !mt && !rt) {
-        la = ma = ra = Math.random() * 151;
-        rafId = requestAnimationFrame(loop);
-        rafmId = requestAnimationFrame(moop);
-        rafrId = requestAnimationFrame(roop);
-        lt = true;
-        mt = true;
-        rt = true;
-        document.getElementById("start").innerText = 'STOP';
+        la = ma = ra = (Math.random() * (20)) + 80;
+        var ly = document.getElementById("slotl").style.top;
+        var my = document.getElementById("slotm").style.top;
+        var ry = document.getElementById("slotr").style.top;
         ls = ly.slice(0, -2);
         ms = my.slice(0, -2);
         rs = ry.slice(0, -2);
+        lt = true;
+        mt = true;
+        rt = true;
+        rafId = requestAnimationFrame(loop);
+        rafmId = requestAnimationFrame(moop);
+        rafrId = requestAnimationFrame(roop);
+        document.getElementById("start").innerText = 'STOP';
         if (newDiv != undefined) {
             newDiv.remove();
         }
@@ -52,8 +51,8 @@ function loop() {
     if (ls >= -4) {
         ls = -445;
     }
-    rafId = requestAnimationFrame(loop);
     document.getElementById("slotl").style.top = ls + "px";
+    rafId = requestAnimationFrame(loop);
 }
 
 function moop() {
@@ -61,8 +60,8 @@ function moop() {
     if (ms >= -4) {
         ms = -445;
     }
-    rafmId = requestAnimationFrame(moop);
     document.getElementById("slotm").style.top = ms + "px";
+    rafmId = requestAnimationFrame(moop);
 }
 
 function roop() {
@@ -70,8 +69,8 @@ function roop() {
     if (rs >= -4) {
         rs = -445;
     }
-    rafrId = requestAnimationFrame(roop);
     document.getElementById("slotr").style.top = rs + "px";
+    rafrId = requestAnimationFrame(roop);
 }
 
 function lslow() {
