@@ -21,14 +21,20 @@ document.getElementById("start").onclick = function() {
 };
 window.onload = function() {
 
-    l.onclick = open;
-    m.onclick = open;
-    r.onclick = open;
+    l.onclick = open(l);
+    m.onclick = open(m);
+    r.onclick = open(r);
 }
-var open = function() {
+var open = function(object) {
     if (isShuffled) {
         ball.style.display = "";
-        ball.style.marginLeft = l.style.marginLeft;
+        if (object == l) {
+            ball.style.marginLeft = r.style.marginLeft;
+        } else if (object == m) {
+            ball.style.marginLeft = l.style.marginLeft;
+        } else if (object == r) {
+            ball.style.marginLeft = m.style.marginLeft;
+        }
         l.style.top = "50px";
         m.style.top = "50px";
         r.style.top = "50px";

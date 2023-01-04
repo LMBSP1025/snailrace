@@ -3,6 +3,24 @@ const names = document.getElementsByClassName("name");
 let aPos, bPos, cPos, dPos, ePos = 0;
 let game;
 let as, bs, cs, ds, es;
+var sspeed = [as, bs, cs, ds, es];
+document.addEventListener('keydown', (event) => {
+    if (event.key == "1") {
+        as += 0.02;
+    } else if (event.key == "2") {
+        bs += 0.02;
+
+    } else if (event.key == "3") {
+        cs += 0.02;
+
+    } else if (event.key == "4") {
+        ds += 0.02;
+
+    } else if (event.key == "5") {
+        es += 0.02;
+
+    }
+});
 let run = () => {
     aPos += as + Math.random();
     bPos += bs + Math.random();
