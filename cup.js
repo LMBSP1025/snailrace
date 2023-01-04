@@ -20,15 +20,15 @@ document.getElementById("start").onclick = function() {
     }, 500);
 };
 window.onload = function() {
-    l.onclick = open()
-    m.onclick = open()
-    r.onclick = open()
-}
 
-function open() {
+    l.onclick = open(l);
+    m.onclick = open(m);
+    r.onclick = open(r);
+}
+var open = function(object) {
     if (isShuffled) {
-        ball.style.marginLeft = r.style.marginLeft;
         ball.style.display = "";
+        ball.style.marginLeft = r.style.marginLeft;
         l.style.top = "50px";
         m.style.top = "50px";
         r.style.top = "50px";
