@@ -45,6 +45,7 @@ let run = () => {
     }
 }
 document.getElementById("start").onclick = function() {
+    resetSpeed();
     for (var i = 0; i < 5; i++) {
         names[i].style.color = "black";
         names[i].style.fontWeight = "normal";
@@ -56,6 +57,10 @@ document.getElementById("start").onclick = function() {
     document.getElementById("set").style.display = 'none';
 };
 let setSpeed = () => {
+    resetSpeed();
+};
+
+function resetSpeed() {
     let a = Math.random();
     let b = Math.random();
     let c = Math.random();
@@ -72,7 +77,7 @@ let setSpeed = () => {
     cs = cs / 2500;
     ds = ds / 2500;
     es = es / 2500;
-};
+}
 
 window.onload = setSpeed;
 document.getElementById("set").onclick = setSpeed;

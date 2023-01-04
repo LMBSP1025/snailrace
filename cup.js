@@ -20,21 +20,15 @@ document.getElementById("start").onclick = function() {
     }, 500);
 };
 window.onload = function() {
-
-    l.onclick = open(l);
-    m.onclick = open(m);
-    r.onclick = open(r);
+    l.onclick = open()
+    m.onclick = open()
+    r.onclick = open()
 }
-var open = function(object) {
+
+function open() {
     if (isShuffled) {
+        ball.style.marginLeft = r.style.marginLeft;
         ball.style.display = "";
-        if (object == l) {
-            ball.style.marginLeft = r.style.marginLeft;
-        } else if (object == m) {
-            ball.style.marginLeft = l.style.marginLeft;
-        } else if (object == r) {
-            ball.style.marginLeft = m.style.marginLeft;
-        }
         l.style.top = "50px";
         m.style.top = "50px";
         r.style.top = "50px";
